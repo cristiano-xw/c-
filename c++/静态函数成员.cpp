@@ -9,7 +9,7 @@ class point
 			{
 			 count ++;	
 			}
-	point (point &p)
+	point (point &p) 
 	{
 		x=p.x;
 		y=p.y;

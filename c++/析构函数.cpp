@@ -25,7 +25,7 @@ class derived: public base2,public base1,public base3
 {
 	public:
 		derived(int a,int b,int c,int d):base1(a),member2(d),member1(c),base2(b)
-		{}      
+		{}       
 	private:
 		base1 member1;
 		base2 member2;

@@ -17,7 +17,7 @@ class base2
 class base3
 {
 	public:
-		base3(){cout<<"constructing base3* "<<endl;}
+		base3(){cout<<"constructing base3* "<<endl;}   
 		~base3(){cout<<"destructing base3 "<<endl;}
 };
 

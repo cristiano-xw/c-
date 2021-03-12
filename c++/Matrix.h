@@ -5,7 +5,7 @@ class Matrix
 	public:
 		Matrix(int size=2);//构造 
 		~Matrix();//析构 
-		void setMatrix(const double*values);
+		void setMatrix(const double*values);     
 		void printMatrix() const;    
 		int getsize() const{return size;}//得到矩阵大小 
 		double &element(int i,int j){return elements[i*size+j];}

@@ -55,7 +55,7 @@ void topo()//ÅÐ¶Ïº¯Êý
             sum++;
         } 
     }
-    cout<<sum<<"ok";
+    //cout<<sum<<"ok";
     
     while(!q.empty())
 	{

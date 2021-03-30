@@ -30,7 +30,7 @@ int main()
 			}
 		}
 		ans++;
-		sum+=s[i];//sum的值加上当前面值 
+		sum+=s[i]; //sum的值加上当前面值  
 	}
 	
 	cout<<ans;

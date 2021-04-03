@@ -3,10 +3,10 @@
 using namespace std;
 class card
 {
-	public:
+	public:  
 		string color;
 		string point;
-		card(string color, string point)
+		card(string color, string point)  
 		{
 			this->color=color;
 			this->point=point;
@@ -60,7 +60,7 @@ rcards::rcards()
 void rcards::xipai() 
 {
     srand((int)time(0));
-	random_shuffle(this->dp.begin(), this->dp.end()); 
+	random_shuffle(this->dp.begin(),this->dp.end());  
 };  
 
 int main()

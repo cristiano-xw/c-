@@ -1,3 +1,5 @@
+#ifndef STACK_H
+#define STACK_H
 typedef unsigned long Item;
 
 class stack
@@ -14,5 +16,5 @@ class stack
 		bool push(const Item &item);
 		bool pop(Item & item);
 };
-
+#endif
 

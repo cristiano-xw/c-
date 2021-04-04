@@ -1,6 +1,6 @@
 #include<iostream>
 #include<cctype>
-#include"stack2.h"
+#include"stack2.h"     
 using namespace std;
 
 int main()

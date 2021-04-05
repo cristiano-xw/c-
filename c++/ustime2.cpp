@@ -4,7 +4,8 @@ using namespace std;
 
 int main()
 {
-	time planning;
+	time planning();
+	//planning(2,89);	
 	time coding(2,40);
 	time fixing(5,55);
 	time total;
@@ -30,5 +31,4 @@ int main()
 	total=morefixing+total;
 	total.show();
 	cout<<endl; 
-	
 }

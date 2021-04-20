@@ -1,20 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-class student
+class student:private string ,private valarray<double> 
 {
     private:
-        typedef std::valarray<double> ArryDb;//stlç¥å™¨ç»´æŠ¤
-        string name; 
-        ArryDb scores;
+        typedef std::valarray<double> ArryDb;
         ostream & arr_out(ostream& os) const;
     public:
-        student(): name("null"),scores(){}  //é»˜è®¤æ„é€ å‡½æ•°
-        explicit student(const string &s): name(s),scores(){}
-        explicit student(int n) :name("null"),scores(n){}//é˜²æ­¢éšå¼è½¬æ¢
-        student(const string &s,int n):name(s),scores(n){}
-        student(const string &s,const ArryDb &a):name(s),scores(a){}
-        student(const char*str,const double *pd,int n):name(str),scores(pd,n){}
+        student(): string("null"),ArryDb(){} //Ö±½ÓÊ¹ÓÃÀàÃûÀ´¹¹Ôìº¯Êı 
+        explicit student(const string &s): string(s),ArryDb(){}
+        explicit student(int n) :string("null"),ArryDb(n){} 
+        student(const string &s,int n):string(s),ArryDb(n){}
+        student(const string &s,const ArryDb &a):string(s),ArryDb(a){}
+        student(const char*str,const double *pd,int n):string(str),ArryDb(pd,n){}
         ~student(){}
         double average() const;
         const string &Name() const;
@@ -29,35 +27,35 @@ class student
 
 double student::average() const
 {
-    if(scores.size()>0)
-    return scores.sum()/scores.size();
+    if(ArryDb::size()>0)
+    return ArryDb::sum()/ArryDb::size();
     else
     return 0;
 }
 
 const string & student::Name() const
 {
-    return name; //è¯»å–åå­—
+    return (const string &)*this;
 } 
 
 double & student::operator[](int i)
 {
-    return scores[i];
+    return ArryDb::operator[](i);
 }
 
 ostream & student::arr_out(ostream & os) const
 {
-    int i;
-    int lim=scores.size();
+    int i=0;
+    int lim=ArryDb::size();
     if(lim>0)
     {
-        for(int i=0;i<lim;i++)
+        for(i=0;i<lim;i++)
         {
-            os<<scores[i]<<" ";
+            os<<ArryDb::operator[](i)<<" ";
             if(i%5==4)
             os<<endl;
         }
-        if(i%5!=0)
+        if(i % 5 != 0)
         os<<endl;
     }
     else 
@@ -67,19 +65,19 @@ ostream & student::arr_out(ostream & os) const
 
 istream & operator>>(istream & is,student & stu)  
 {
-    is >> stu.name;
+    is>>(string &)stu;
     return is;
 } 
 
 istream & getline(istream & is ,student & stu)
 {
-   getline(is,stu.name);
+   getline(is,(string &)stu);
    return is; 
 }
 
 ostream & operator<<(ostream & os, student &stu)
 {
-    os<<"scores for"<<stu.name<<":\n";
+    os<<"ArryDb for"<<(const string &)stu<<":\n";
     stu.arr_out(os); 
     return os;
 }

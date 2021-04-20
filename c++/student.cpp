@@ -2,7 +2,7 @@
 #include"student.h"
 using namespace std;
 
-void sett(student & sa,int n)
+void sett(student & sa,int n)	//��ֵ���� 
 {
     cout<<"please enter the student's name ";
     getline(cin,sa);
@@ -10,10 +10,11 @@ void sett(student & sa,int n)
     for(int i=0;i<n;i++)
     {
         cin>>sa[i];
-    }
-
-    while (cin.get()!='\n')
+    }   
+    while (cin.get()!='\n') 
+    {
     continue;
+	}
 }
 
 const int pupils=3;
@@ -21,16 +22,16 @@ const int quizzes=5;
 
 int main()
 {
-    student ada[pupils];
-    for(int i=0;i<pupils;i++)
+    student ada[pupils]={student(5),student(5),student(5)}; 
+    for(int i=0;i<3;i++) 
     {
         sett(ada[i],quizzes);
-    }
-
+    }  
+    
     cout<<"\nstudent list:\n";
     for(int i=0;i<pupils;i++)
     {
-        cout<<ada[i].Name()<<endl;  //通过基类函数访问私有成员
+        cout<<ada[i].Name()<<endl;   
     }
 
     cout<<"\nresults:";

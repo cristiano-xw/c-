@@ -1,17 +1,14 @@
-//头文件：paimiansheji.h
 #include<bits/stdc++.h>
 using namespace std;
 
 typedef enum
 {
-	//牌面A,J=10,Q=10,K=10
 	A=1,two, three, four, five, six, seven, eight,nine,ten,J,Q,K
 }numtype;
 //变量numtype的类型为枚举型enum 
 
 typedef enum
 	{
-		//扑克牌的花色：clubs(梅花)，diamonds(方块)，hearts(红桃)和spades(黑桃)
 		clubs,diamonds,hearts,spades
 	}shapetype;
 //变量shapetype的类型为枚举型enum 
@@ -51,13 +48,14 @@ ostream &operator<<(ostream &output,const Card &card )
 	{
 		output<<"K";
 	}
-	else cout<<(int)card.num;//强制转化面值为int型
+	else cout<<(int)card.num; 
 
 	return output;
 }
 
-#define max_length 10 //玩家姓名长度不能大于10个字节 
-//声明21点的游戏类
+#define max_length 10  
+ 
+
 class Point21
 {
 //公共变量 
@@ -89,9 +87,7 @@ private:
 	Card FirstCard()
 	{
 		return PK[startPosition++];
-	}//发一张扑克牌
-	
-		
+	}//发一张扑克牌	
 };
 
 //初始化扑克牌，发牌位置，庄家与各玩家手中的扑克牌数
@@ -174,11 +170,7 @@ int Point21::GetTotalScore(Card gamer[21],int n)
 	return totalScore;
 }
 
-void Point21::ShowStatus(int num,bool hideFirstCard)
-/*当num=0时，显示庄家当前状态，当num>0,显示第num个玩家的当前状态，
-当hideFirstCard为真时，将隐藏首张扑克牌与总分，否则将显示首张牌与总分*/
-
-
+void Point21::ShowStatus(int num,bool hideFirstCard) 
 {
 
 	cout<<endl<<name[num]<<":";	//显示庄家或玩家姓名
@@ -302,6 +294,7 @@ void Point21::Game()
 		}
 	}
 }
+
 
 int main()
 {		

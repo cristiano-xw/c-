@@ -67,10 +67,10 @@ public:
 			if (iCountA==0)
 				break;
 		}
-		
 		return iRet;
 	}
 };
+
 
 class Deck:public Hand
 {
@@ -111,10 +111,12 @@ public:
 		if (!cards.empty())
 		{
 			Card FirstCard=cards.at(0);
-			hand.cards.push_back(FirstCard);
+			hand.cards.push_back(FirstCard);    
 			cards.erase(cards.begin());
 		}
 	}
+	
+	
 };
 
 

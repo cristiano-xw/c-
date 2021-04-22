@@ -3,7 +3,7 @@ using namespace std;
 
 typedef enum
 {
-	A=1,two, three, four, five, six, seven, eight,nine,10,J,Q,K
+	A=1,two, three, four, five, six, seven, eight,nine,ten,J,Q,K
 }numtype;
 
 typedef enum
@@ -98,7 +98,7 @@ int poker::getscore(Card gamer[21],int n)
 	for(pos=0;pos<n;pos++)	 
 	{  
 		if(gamer[pos].num==A) ans+=11;	 
-		else if(gamer[pos].num>10)ans+=10;	 
+		else if(gamer[pos].num>ten)ans+=10;	 
 		else ans+=(int)gamer[pos].num;  
 	}
 	

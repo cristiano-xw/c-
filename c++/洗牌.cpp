@@ -5,24 +5,18 @@ typedef enum
 {
 	A=1,two, three, four, five, six, seven, eight,nine,ten,J,Q,K
 }numtype;
-//变量numtype的类型为枚举型enum 
 
 typedef enum
-	{
-		clubs,diamonds,hearts,spades
-	}shapetype;
-//变量shapetype的类型为枚举型enum 
+{
+	clubs,diamonds,hearts,spades
+}shapetype;
 
 struct Card
 {
-	numtype num;//面值数字
-	shapetype shape;//花色形状
+	numtype num; 
+	shapetype shape; 
 };
-//定义一副牌的结构体
 
-
-//重载运算符<<
-//运用了const
 ostream &operator<<(ostream &output,const Card &card )
 {
 	//输出花色
@@ -31,7 +25,6 @@ ostream &operator<<(ostream &output,const Card &card )
 	if(card.shape==hearts) output<<"红桃";
 	if(card.shape==spades) output<<"黑桃";
 
-	//输出面值
 	if(card.num==A)
 	{
 		output<<"A";

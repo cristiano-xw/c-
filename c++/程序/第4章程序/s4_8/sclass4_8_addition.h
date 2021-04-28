@@ -19,10 +19,7 @@ public:
 	string Add(string s1, string s2);	//两个字符串对象相加
 	int Add(double d1, double d2);		//两个双精度浮点数相加
 	//double Add(double d1, double d2);	//不能重载，与上一个函数仅仅返回值类型不同
-};  
+};  //只是返回类型不同，编译器不可以识别
+//同种类型函数，只在使用方式上有差别，不可以重载
 
 #endif   //结束编译预处理 
- 
-
-
-

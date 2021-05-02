@@ -11,7 +11,7 @@ namespace VECTOR
     private:
         double x;
         double y;
-        Mode mode;
+        Mode mode;//定义枚举类
         double set_mag() const;             //修改了原来设置矢量长度的函数;
         double set_ang() const;             //修改了原来设置矢量角度的函数;
         void set_x(double mag, double ang); //修改了原来设置矢量x坐标的函数;
